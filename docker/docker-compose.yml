@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  sn-mid:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        MID_INSTALLER_URL: https://install.service-now.com/glide/distribution/builds/package/app-signed/mid-linux-installer/2026/01/04/mid-linux-installer.yokohama-12-18-2024__patch11-12-16-2025_01-04-2026_2103.linux.x86-64.deb
+
+    container_name: sn-mid-server
+
+    env_file:
+      - .env
+
+    volumes:
+      - mid-data:/opt/servicenow/mid/agent
+
+    restart: unless-stopped
+
+volumes:
+  mid-data:
+

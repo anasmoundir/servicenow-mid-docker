@@ -1,0 +1,6 @@
+<parameters>
+  <parameter name="url" value="${SN_INSTANCE_URL}" />
+  <parameter name="mid.instance.username" value="${MID_USERNAME}" />
+  <parameter secure="true" name="mid.instance.password" value="${MID_PASSWORD}" />
+  <parameter name="name" value="${MID_NAME}" />
+</parameters>
