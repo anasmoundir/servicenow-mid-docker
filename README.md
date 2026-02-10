@@ -140,12 +140,6 @@ docker-compose up -d --build
 
 ---
 
-## Troubleshooting
-
-### Apple Silicon (M1/M2/M3) Macs
-
-The setup automatically handles platform compatibility using Docker's AMD64 emulation. The container runs in `linux/amd64` mode to match the MID Server installer architecture.
-
 ### Container Keeps Restarting
 
 1. Check logs: `docker logs sn-mid-server`
